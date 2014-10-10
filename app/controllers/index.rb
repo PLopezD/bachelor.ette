@@ -18,32 +18,32 @@ post '/' do
   redirect '/'
 end
 
-post '/logout' do
-  session[:user_id] = nil
-  redirect '/'
+get '/:id' do
+  @user = User.find(params[:id])
+  erb :show_profile
 end
 
-# SIGN UP PAGE
-get '/signup' do
-  erb :signup
+get '/:id/edit' do
+  @user = User.find(params[:id])
+  erb :edit
 end
 
-post '/signup' do
-  user = User.new(params[:args])
-  password = params[:args][:password_hash]
-# Feel free to add more password validations below
-  if password.length < 6
-    session[:errors] = {error: ["Password must be at least 6 characters."]}
-    redirect "/signup"
-  end
-  if user.valid?
-    user.password = password
-    user.save!
-    session[:user_id] = user.id
-    redirect ('/')
+patch '/:id' do
+  user = User.find(params[:id])
+  if user.update(params[:args])
+
   else
     errors = user.errors.messages
     session[:errors] = errors
-    redirect "/signup"
+    redirect "/#{user.id}/edit"
   end
 end
+
+
+post '/logout/' do
+  session.clear
+  session[:errors] = {notice: ["Goodbye. Good luck out there."]}
+  redirect '/'
+end
+
+

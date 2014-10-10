@@ -1,0 +1,17 @@
+<h1>Check out your profile!</h1>
+<img src="<%= @user.picture %>">
+<%= @user.first_name %>
+<%= @user.last_name %>
+<%= @user.birthday %>
+<%= @user.gender %>
+<%= @user.preference %>
+<%= @user.bio %>
+<%= @user.quirk %>
+
+<form action="/<%=session[:user_id]/edit %>" method="get">
+  <input type="submit" value="Edit Profile">
+</form>
+
+<form action="/<%=session[:user_id] %>/delete" method="get">
+  <input type="submit" value="Delete My Account">
+</form>

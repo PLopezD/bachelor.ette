@@ -19,7 +19,8 @@
 </head>
 <body>
   <%= erb :_logged_in %>
+  <%= erb :_errormsg %>
   <%= yield %>
 </body>
-<% session[:errors] = nil %>
+
 </html>
