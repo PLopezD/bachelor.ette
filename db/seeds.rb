@@ -13,17 +13,17 @@ blurbs = []
 doc.search('p').map { |par|  blurbs.push(par.inner_text) if par.inner_text.length > 300}
 
 quirks = ["Picks Nose","Nevernude","Left-handed", "Semi-professional Kazoo Player","Allergic to milk", "Speaks fluent pig-latin", "Don't cut my toenails", "I shower monthly", "I spend all my time on my favorite app, Shitter", "I spend all my money on Shitter emojis", "I pick fights with people bigger than me", "I like bumblebees more than turtles and ospreys", " I can't use a spoon", "I drink coffee", "I like music", "I'm an alcoholic", "I used to be a crack-whore"]
- counter = 0
+counter = 0
 
 
 40.times do
-User.create(first_name: females[counter].split[0] , last_name: females[counter].split[1], email: Faker::Internet.safe_email(females[counter].split[0]), password_hash: Faker::Internet.password, birthday: dates.sample, picture:"http://api.randomuser.me/portraits/women/#{counter}.jpg", quirk: quirks.sample, gender: "female", bio: blurbs.sample, preference: ['LGBTQ','straight','other'].sample, date_count: 0)
-counter += 1
+  User.create(first_name: females[counter].split[0] , last_name: females[counter].split[1], email: Faker::Internet.safe_email(females[counter].split[0]), password_hash: Faker::Internet.password, birthday: dates.sample, picture:"http://api.randomuser.me/portraits/women/#{counter}.jpg", quirk: quirks.sample, gender: "female", bio: blurbs.sample, preference: ['LGBTQ','straight','other'].sample, date_count: 0)
+  counter += 1
 end
- counter = 0
+counter = 0
 40.times do
-User.create(first_name: males[counter].split[0] , last_name: males[counter].split[1], email: Faker::Internet.safe_email(males[counter].split[0]), password_hash: Faker::Internet.password, birthday: dates.sample, picture:"http://api.randomuser.me/portraits/men/#{counter}.jpg", quirk: quirks.sample, gender: "male", bio: blurbs.sample, preference: ['LGBTQ','straight','other'].sample, date_count: 0)
-counter += 1
+  User.create(first_name: males[counter].split[0] , last_name: males[counter].split[1], email: Faker::Internet.safe_email(males[counter].split[0]), password_hash: Faker::Internet.password, birthday: dates.sample, picture:"http://api.randomuser.me/portraits/men/#{counter}.jpg", quirk: quirks.sample, gender: "male", bio: blurbs.sample, preference: ['LGBTQ','straight','other'].sample, date_count: 0)
+  counter += 1
 end
 
 
