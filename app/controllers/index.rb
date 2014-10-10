@@ -18,6 +18,10 @@ post '/' do
   redirect '/'
 end
 
+post '/logout' do
+  session[:user_id] = nil
+  redirect '/'
+end
 
 # SIGN UP PAGE
 get '/signup' do

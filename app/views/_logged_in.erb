@@ -1,0 +1,17 @@
+<% if session[:user_id] %>
+<div class="loggedin">
+
+<form action="/<%=session[:user_id] %>/dates" type="get">
+  <input type="submit" value="My Dates">
+</form>
+
+<form action="/<%=session[:user_id] %>/edit" type="get">
+  <input type="submit" value="Edit Profile">
+</form>
+
+<form action="/logout" type="post">
+  <input type="submit" value="Logout">
+</form>
+
+</div>
+<% end %>

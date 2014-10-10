@@ -1,11 +1,12 @@
 <div class="container">
   <h1>Welcome to Bachelor.ette!</h1>
+  <%= erb :_errormsg %>
   <form action="/" method="post">
     <p>Email: </p>
-    <p><input type="text" id="Email" name="email" value=""></p>
+    <p><input type="email" id="Email" name="email" value=""></p>
 
     <p>Password: </p>
-    <p><input type="text" id="Password" name="password" value=""></p>
+    <p><input type="password" id="Password" name="password" value=""></p>
 
     <input type="submit" value="Log in"/>
 
