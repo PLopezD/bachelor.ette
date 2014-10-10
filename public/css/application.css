@@ -7,3 +7,12 @@
 th {
   text-align: left;
 }
+
+.loggedin {
+  display: block;
+  float: right;
+}
+
+.loggedin form {
+  display: inline-block;
+}
