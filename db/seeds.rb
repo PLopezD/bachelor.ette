@@ -17,12 +17,12 @@ counter = 0
 
 
 40.times do
-  User.create(first_name: females[counter].split[0] , last_name: females[counter].split[1], email: Faker::Internet.safe_email(females[counter].split[0]), password_hash: Faker::Internet.password, birthday: dates.sample, picture:"http://api.randomuser.me/portraits/women/#{counter}.jpg", quirk: quirks.sample, gender: "female", bio: blurbs.sample, preference: ['LGBTQ','straight','other'].sample, date_count: 0)
+  User.create(first_name: females[counter].split[0] , last_name: females[counter].split[1], email: Faker::Internet.safe_email(females[counter].split[0]), password_digest: Faker::Internet.password, birthday: dates.sample, picture:"http://api.randomuser.me/portraits/women/#{counter}.jpg", quirk: quirks.sample, gender: "female", bio: blurbs.sample, preference: ['LGBTQ','straight','other'].sample, date_count: 0)
   counter += 1
 end
 counter = 0
 40.times do
-  User.create(first_name: males[counter].split[0] , last_name: males[counter].split[1], email: Faker::Internet.safe_email(males[counter].split[0]), password_hash: Faker::Internet.password, birthday: dates.sample, picture:"http://api.randomuser.me/portraits/men/#{counter}.jpg", quirk: quirks.sample, gender: "male", bio: blurbs.sample, preference: ['LGBTQ','straight','other'].sample, date_count: 0)
+  User.create(first_name: males[counter].split[0] , last_name: males[counter].split[1], email: Faker::Internet.safe_email(males[counter].split[0]), password_digest: Faker::Internet.password, birthday: dates.sample, picture:"http://api.randomuser.me/portraits/men/#{counter}.jpg", quirk: quirks.sample, gender: "male", bio: blurbs.sample, preference: ['LGBTQ','straight','other'].sample, date_count: 0)
   counter += 1
 end
 
