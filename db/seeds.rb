@@ -8,7 +8,7 @@ males=["Murdoch Nickoloff","Milty Lovejoy","Dietrich Carmichael","Lodovico Piess
 dates = ['1986-03-17','1986-04-07','1986-05-16','1987-06-02','1987-09-22','1988-02-04','1988-04-08','1988-08-11','1988-10-07','1989-02-06','1989-07-28','1990-01-23','1991-03-08','1991-05-03','1992-01-02','1992-04-22','1992-05-08','1992-06-18','1992-08-28','1992-11-10','1993-03-05','1993-05-10','1993-12-03','1994-03-02','1994-03-17','1986-03-17','1986-04-07','1986-05-16','1987-06-02','1987-09-22','1988-02-04']
 dates.map! { |date| Date.parse(date)}
 
-doc = Nokogiri::HTML(File.open('dates.html'))
+doc = Nokogiri::HTML(File.open('db/dates.html'))
 blurbs = []
 doc.search('p').map { |par|  blurbs.push(par.inner_text) if par.inner_text.length > 300}
 
@@ -16,11 +16,15 @@ quirks = ["Picks Nose","Nevernude","Left-handed", "Semi-professional Kazoo Playe
  counter = 0
 
 
-# 40.times do
-User.create(first_name: females[counter].split[0] , last_name: females[counter].split[1], email: Faker::Internet.safe_email(females[counter].split[0]), password_hash: Faker::Internet.password, birthday: dates.sample, picture:"http://api.randomuser.me/portraits/women/#{counter}.jpg", quirk: quirks.sample, gender: "female", bio: blurbs.sample, preference: ['lgbtq','straight','other'].sample, date_count: 0)
-# counter += 1
-#       end
-
+40.times do
+User.create(first_name: females[counter].split[0] , last_name: females[counter].split[1], email: Faker::Internet.safe_email(females[counter].split[0]), password_hash: Faker::Internet.password, birthday: dates.sample, picture:"http://api.randomuser.me/portraits/women/#{counter}.jpg", quirk: quirks.sample, gender: "female", bio: blurbs.sample, preference: ['LGBTQ','straight','other'].sample, date_count: 0)
+counter += 1
+end
+ counter = 0
+40.times do
+User.create(first_name: males[counter].split[0] , last_name: males[counter].split[1], email: Faker::Internet.safe_email(males[counter].split[0]), password_hash: Faker::Internet.password, birthday: dates.sample, picture:"http://api.randomuser.me/portraits/men/#{counter}.jpg", quirk: quirks.sample, gender: "male", bio: blurbs.sample, preference: ['LGBTQ','straight','other'].sample, date_count: 0)
+counter += 1
+end
 
 
 

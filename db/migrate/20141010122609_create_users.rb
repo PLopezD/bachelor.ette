@@ -7,12 +7,12 @@ class CreateUsers < ActiveRecord::Migration
       t.string  :password_hash
       t.date    :birthday
       t.string  :picture
-      t.string  :quirk
+      t.text :quirk
       t.string  :gender
-      t.string  :bio
+      t.text  :bio
       t.string  :preference
       t.integer  :date_count
-      
+
       t.timestamps
     end
   end
