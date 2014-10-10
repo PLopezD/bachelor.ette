@@ -130,6 +130,11 @@ task "console" do
   exec "irb -r./config/environment"
 end
 
+desc 'yolo'
+task "yolo" do
+  exec "rake db:drop && rake db:create && rake db:migrate && rake db:seed"
+end
+
 desc "Run the specs"
 RSpec::Core::RakeTask.new(:spec)
 

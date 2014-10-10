@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string  :password_digest
       t.date    :birthday
       t.string  :picture
-      t.text  :quirk
+      t.text :quirk
       t.string  :gender
       t.text  :bio
       t.string  :preference
