@@ -5,7 +5,7 @@ end
 
 post '/user/signup' do
   user = User.new(params[:args])
-  password = params[:args][:password_hash]
+  password = params[:args][:password]
 # Feel free to add more password validations below
   if password.length < 6
     session[:messages] = {error: ["Password must be at least 6 characters."]}
