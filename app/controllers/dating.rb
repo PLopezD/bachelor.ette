@@ -13,14 +13,39 @@ post '/propose' do
     errors = proposal.errors.messages
     session[:messages] = errors
   end
-  
-  redirect "/"
+
+  redirect '/'
 end
 
 
 # Bachelorette checks out the potential suiter's profile
-get "/accept/:id" do
-  @user = Proposal.find(params[:id]).sender
+get '/accept/:proposal_id' do
+  @proposer = Proposal.find(params[:proposal_id]).sender
+  @proposal_id = params[:proposal_id]
+  erb:'accept_proposal'
+end
 
-  erb:'show_profile_proposal'
+post '/accept' do
+  proposal = Proposal.find(params[:proposal_id])
+  Hookup.create(sender_id: proposal.sender_id, recipient_id: proposal.recipient_id, description: proposal.description)
+  place_in_line = FutureBachelorette.find_by(status: "open")
+  place_in_line.update(status: "closed")
+  Proposal.delete_all
+  redirect '/congratulations'
+end
+
+get '/congratulations' do
+  erb :congratulations
+end
+
+get '/:id/dates' do
+  @dates = Hookup.where(recipient_id: params[:id]) + Hookup.where(sender_id: params[:id])
+
+  erb :dates
+end
+
+post '/futurebachelorette' do
+  FutureBachelorette.create(user_id: session[:user_id], status: "open")
+  session[:messages] = {message: ["Welcome to the party!"]}
+  redirect '/'
 end

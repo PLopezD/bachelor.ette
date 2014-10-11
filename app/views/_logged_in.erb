@@ -1,6 +1,14 @@
 <% if logged_in? %>
 <div class="loggedinbar">
 
+Welcome, <%= current_user.first_name %>
+
+<% if !on_active_list? %>
+<form action="/futurebachelorette" method="post">
+  <input type="submit" value="Get On The Bus!">
+</form>
+<% end %>
+
 <form action="/" method="get">
   <input type="submit" value="Home">
 </form>

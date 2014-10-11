@@ -1,6 +1,7 @@
 def show_queue
-  FutureBachelorette.where(status: "open").limit(10).map do |block|
-    User.find(block.id)
+  FutureBachelorette.where(status: "open")[1..10].map do |block|
+  # FutureBachelorette.all.map do |block|
+    User.find(block.user_id)
   end
 end
 
@@ -26,4 +27,8 @@ end
 
 def the_bachelorette?
   current_user == show_bachelorette
+end
+
+def on_active_list?
+  FutureBachelorette.find_by(user_id: session[:user_id], status: "open")
 end

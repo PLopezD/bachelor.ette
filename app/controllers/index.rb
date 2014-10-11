@@ -1,29 +1,23 @@
 # LOG IN PAGE
 
 get '/' do
-  
+
   erb :index
 end
 
 # Log into the site
 post '/' do
   user = User.find_by(email: params[:email])
-
-  session[:user_id] = user.id
-
-
-
-
-
-  # if user
+  if user
   #   if user.authenticate(params[:password])
   #     session[:user_id] = user.id
   #   else
   #   session[:messages] = {error: ["Invalid Password."]}
   #   end
-  # else
-  #   session[:messages] = {error: ["Email not found. Create an account."]}
-  # end
+    session[:user_id] = user.id
+  else
+    session[:messages] = {error: ["Email not found. Create an account."]}
+  end
   redirect '/'
 end
 
@@ -50,7 +44,7 @@ patch '/:id' do
   end
 end
 
-# User deletes own profile 
+# User deletes own profile
 delete '/:id' do
   user = User.find(params[:id])
   user.destroy

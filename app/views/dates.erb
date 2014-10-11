@@ -1,0 +1,7 @@
+<div class="container">
+<h1>Your Dates</h1>
+<% @dates.each do |date| %>
+  <p><img src="<%=date.recipient.picture%>" class="thumbnail" > <%= date.recipient.first_name %> went out with <img src="<%=date.sender.picture%>" class="thumbnail" > <%= date.sender.first_name %></p>
+  <p><%= date.sender.first_name %>'s Pickup Line: "<%= date.description %>"</p>
+<% end %>
+</div>
