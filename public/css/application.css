@@ -62,6 +62,14 @@ button{
 }
 
 
+input[type="text"]
+{
+    font-color:red;
+}
+button{
+  font-family: 'Raleway';
+}
+
 .loggedinbar {
   display: block;
   border: solid;
@@ -76,10 +84,17 @@ button{
 }
 
 .loggedinbar button {
+<<<<<<< HEAD
 
+=======
+>>>>>>> rob_v6
 margin-left: 25px;
 margin-right: 25px;
 }
+.inline-buttons form {
+  display: inline;
+}
+
 .inline-buttons form {
   display: inline;
 }
@@ -171,6 +186,10 @@ margin-right: 25px;
   background-color: #D92546;
   padding: 5px 15px 5px 15px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> rob_v6
 .update_range {
 margin-bottom: 0.25%;
 text-align: center;

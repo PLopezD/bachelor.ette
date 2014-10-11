@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 <div class='update_range'>
+=======
+<div class="col-md-offset-4 col-md-4 col-md-offset-4">
+<div class="update_range">
+>>>>>>> rob_v6
 <h2>Fill in your profile</h2>
 
 <form action="/<%= session[:user_id] %>" method="post">
 <input type="hidden" name="_method" value="patch">
   <p>Email address:</p> <input name="args[email]" value="<%=@user.email %>"></input>
+<<<<<<< HEAD
 <!--
   <div class="input-group">
     Password:
@@ -15,6 +21,13 @@
 </div>
 
 
+=======
+
+ <div class="input-group">
+ <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+ <input class="form-control" name="args[password_digest]" type="password" placeholder="Password">
+</div>
+>>>>>>> rob_v6
   <p>Birthday:</p> <input name="args[birthday]" value="<%=@user.birthday %>" placeholder="DD/MM/YYYY"></input>
 
   <p>Picture:</p> <input name="args[picture]" value="<%=@user.picture %>" placeholder="enter picture url"></input>
@@ -26,9 +39,14 @@
   <p>Bio</p> <input id="testinput"  name="args[bio]" value="<%=@user.bio %>" placeholder="tell us about yourself"></input>
 
   <p>Sexual preference</p> <input name="args[preference]" value="<%=@user.preference %>" placeholder="who are you looking for?"></input>
+<<<<<<< HEAD
 
 </div>
   <button class='btn btn-danger' type="submit" value="update">Update</button>
 
+=======
+  </div>
+  <button class='btn btn-danger' type="submit" value="update">Update</button>
+>>>>>>> rob_v6
 </form>
 
