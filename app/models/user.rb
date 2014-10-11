@@ -1,28 +1,22 @@
+# Successful pairing where bachelorette
+# accepts proposal
+
 class User < ActiveRecord::Base
   # Remember to create a migration!
+
   validates :email, uniqueness: true,
     format: { with: /\S{1,}@\S{1,}.\S{2,}/,
-    message: "Email must be properly formated and unique."}
-  has_many  :future_bachs
+    message: "Email must be properly formated and unique." }
+
+  # Tells user to give a URL to a gif.
+  # validates :picture, presence: { message: "Add a photo" }
+
+  has_many  :future_bachelorettes
   has_many  :hookups
   has_many  :proposals
-
-
+  has_many  :recipients, through: :proposals
+  has_many  :senders, through: :proposals
   include BCrypt
-
-  def self.authenticate(email, given_password)
-    user = User.find_by(email: email)
-    user.password == given_password ? user : nil
-  end
-
-  def password
-    @password ||= Password.new(password_hash)
-  end
-
-  def password=(new_password)
-    @password = Password.create(new_password)
-    self.password_hash = @password
-  end
-
+  has_secure_password
 
 end

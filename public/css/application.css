@@ -8,11 +8,42 @@ th {
   text-align: left;
 }
 
-.loggedin {
+.loggedinbar {
   display: block;
   float: right;
 }
 
-.loggedin form {
+.loggedinbar form {
   display: inline-block;
+}
+
+.thumbnail {
+  width: 50px;
+}
+
+img {
+  width: 300px;
+}
+
+.newdate {
+  background-color: red;
+}
+
+h1{
+  font-family: 'Raleway';
+  font-weight: 10;
+}
+
+p {
+  font-family: 'Indie Flower';
+}
+
+
+
+h3{
+  font-family: 'Raleway';
+}
+
+li{
+  font-family: 'Indie Flower';
 }

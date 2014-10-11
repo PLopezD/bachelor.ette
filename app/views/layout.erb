@@ -7,6 +7,7 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway|Indie+Flower">
   <!--
     application.css is where you put your styles
   -->
@@ -19,8 +20,16 @@
 </head>
 <body>
   <%= erb :_logged_in %>
-  <%= erb :_errormsg %>
+  <%= erb :_message %>
+
+  <%= erb :_show_bachelorette %>
+
+  <%= erb :_propose %>
   <%= yield %>
+  <%= erb :_show_queue %>
+
+
+
 </body>
 
 </html>

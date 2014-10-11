@@ -1,0 +1,15 @@
+<% if !logged_in? %>
+<div class="container">
+  <form action="/" method="post">
+    <p>Email: </p>
+    <p><input type="email" id="Email" name="email" value=""></p>
+
+    <p>Password: </p>
+    <p><input type="password" id="Password" name="password" value=""></p>
+
+    <input type="submit" value="Log in"/>
+
+  </form>
+  <p><a href="/user/signup">Click here to sign up</a></p>
+</div>
+<% end %>
