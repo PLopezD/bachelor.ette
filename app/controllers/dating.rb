@@ -27,6 +27,8 @@ end
 
 post '/accept' do
   proposal = Proposal.find(params[:proposal_id])
+  DateNotification.create(user: User.find(proposal.sender_id), status: "unread")
+  DateNotification.create(user: User.find(proposal.recipient_id), status: "unread")
   Hookup.create(sender_id: proposal.sender_id, recipient_id: proposal.recipient_id, description: proposal.description)
   place_in_line = FutureBachelorette.find_by(status: "open")
   place_in_line.update(status: "closed")
@@ -39,6 +41,7 @@ get '/congratulations' do
 end
 
 get '/:id/dates' do
+  date_notification?.update(status: "read")
   @dates = all_dates
   erb :dates
 end

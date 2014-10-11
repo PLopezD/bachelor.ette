@@ -1,11 +1,19 @@
+body {
+
+}
+
 .container {
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  background-color: #c5a796;
 }
 th {
   text-align: left;
+}
+
+.bachlorette {
+  background-color: #c50511;
 }
 
 .loggedinbar {
@@ -21,10 +29,58 @@ th {
   width: 50px;
 }
 
-img {
+.front img {
   width: 300px;
+  height: 300px;
 }
 
-.newdate {
+.unread {
   background-color: red;
+}
+
+h2 {
+  color: #ca918c;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000;
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-container, .front, .back {
+  width: 320px;
+  height: 350px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
 }
