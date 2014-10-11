@@ -1,10 +1,10 @@
-<div class="container">
+<div class="col-md-offset-4 col-md-4 col-md-offset-4">
   <% if has_already_proposed? %>
     <h3>Slow down, horndog. Wait for the next lucky individual...</h3>
   <% else %>
     <form action="/propose" method="post">
-      <p>Message your future love: </p>
-      <p><textarea type="text" name="proposal" placeholder="Keep it PG" value="" rows="10" cols="40"></textarea></p>
+      <p class="propose">Message your future love: </p>
+      <p class="propose"><textarea type="text" name="proposal" placeholder="Keep it PG" value="" rows="10" cols="40"></textarea></p>
       <input type="submit" value="Send with a kiss"/>
     </form>
   <% end %>

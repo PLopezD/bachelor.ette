@@ -123,6 +123,14 @@ margin-right: 25px;
   color: #1C4C86;
 }
 
+p.propose {
+  color: #D92546;
+}
+
+p.accept_proposal {
+  color: #D92546;
+}
+
 .queue {
   background-color: #9A98E3;
 }
@@ -131,6 +139,18 @@ margin-right: 25px;
   display: inline-block;
   padding: 30px;
 }
+
+
+ul.dates {
+  width: 100%;
+  display: inline;
+  margin-right: 40px;
+  margin-left: 0px;
+  padding-left: 0px;
+  text-align: left;
+  list-style-type: none;
+}
+
 
 
 /* entire container, keeps perspective */
