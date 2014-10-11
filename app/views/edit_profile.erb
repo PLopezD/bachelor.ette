@@ -1,15 +1,34 @@
+<div class='update_range'>
 <h2>Fill in your profile</h2>
 
 <form action="/<%= session[:user_id] %>" method="post">
 <input type="hidden" name="_method" value="patch">
   <p>Email address:</p> <input name="args[email]" value="<%=@user.email %>"></input>
-  <p>Password:</p> <input type="password" name="args[password_digest]" placeholder="*********"></input>
+<!--
+  <div class="input-group">
+    Password:
+  <input class='form-control' type="password" name="args[password_digest]" placeholder="*********"></input></div>
+ -->
+  <div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+  <input class="form-control" name="args[password_digest]" type="password" placeholder="Password">
+</div>
+
+
   <p>Birthday:</p> <input name="args[birthday]" value="<%=@user.birthday %>" placeholder="DD/MM/YYYY"></input>
+
   <p>Picture:</p> <input name="args[picture]" value="<%=@user.picture %>" placeholder="enter picture url"></input>
+
   <p>Quirk:</p> <input name="args[quirk]" value="<%=@user.quirk %>" placeholder="quiiiirk"></input>
+
   <p>Gender</p> <input name="args[gender]" value="<%=@user.gender %>" placeholder="i.e female"></input>
-  <p>Bio</p> <input name="args[bio]" value="<%=@user.bio %>" placeholder="tell us about yourself"></input>
+
+  <p>Bio</p> <input id="testinput"  name="args[bio]" value="<%=@user.bio %>" placeholder="tell us about yourself"></input>
+
   <p>Sexual preference</p> <input name="args[preference]" value="<%=@user.preference %>" placeholder="who are you looking for?"></input>
 
-  <input type="submit" value="update"></input>
+</div>
+  <button class='btn btn-danger' type="submit" value="update">Update</button>
+
 </form>
+

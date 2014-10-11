@@ -2,7 +2,7 @@
   <div class="container">
   <h1>Accept a suitor</h1>
     <% show_proposals.each do |proposal| %>
-    <p><a href=""><%= proposal.sender.first_name %></a> said..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/accept/<%= proposal.id %>"><button>Check me out?</button></a><br><%= proposal.description %></p>
+    <p><a href=""><%= proposal.sender.first_name %></a> said..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/accept/<%= proposal.id %>"><button class="btn btn-danger">Check me out?</button></a><br><%= proposal.description %></p>
     <% end %>
   </div>
   <% end %>
