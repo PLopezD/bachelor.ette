@@ -1,6 +1,5 @@
 def show_queue
   FutureBachelorette.where(status: "open")[1..10].map do |block|
-  # FutureBachelorette.all.map do |block|
     User.find(block.user_id)
   end
 end
@@ -31,4 +30,8 @@ end
 
 def on_active_list?
   FutureBachelorette.find_by(user_id: session[:user_id], status: "open")
+end
+
+def all_dates
+  (Hookup.where(recipient_id: session[:user_id]) + Hookup.where(sender_id: session[:user_id]))
 end

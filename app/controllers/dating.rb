@@ -39,8 +39,7 @@ get '/congratulations' do
 end
 
 get '/:id/dates' do
-  @dates = Hookup.where(recipient_id: params[:id]) + Hookup.where(sender_id: params[:id])
-
+  @dates = all_dates
   erb :dates
 end
 
