@@ -1,4 +1,4 @@
-<h1>Check</h1>
+<h1>Proposer's Profile</h1>
 <img src="<%= @user.picture %>"><br>
 <%= @user.first_name %><br>
 <%= @user.last_name %><br>
@@ -8,7 +8,7 @@
 <%= @user.bio %><br>
 <%= @user.quirk %><br>
 
-<form action="/<%=session[:user_id]%>/edit" method="get">
+<form action="/accept/<%=session[:user_id]%>" method="post">
   <input type="submit" value="Accept!">
 </form>
 

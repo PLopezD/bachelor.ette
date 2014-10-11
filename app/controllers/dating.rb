@@ -22,5 +22,5 @@ end
 get "/accept/:id" do
   @user = Proposal.find(params[:id]).sender
 
-  erb:'show_profile'
+  erb:'show_profile_proposal'
 end
