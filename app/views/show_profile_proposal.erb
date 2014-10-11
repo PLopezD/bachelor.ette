@@ -1,0 +1,18 @@
+<h1>Check</h1>
+<img src="<%= @user.picture %>"><br>
+<%= @user.first_name %><br>
+<%= @user.last_name %><br>
+<%= @user.birthday %><br>
+<%= @user.gender %><br>
+<%= @user.preference %><br>
+<%= @user.bio %><br>
+<%= @user.quirk %><br>
+
+<form action="/<%=session[:user_id]%>/edit" method="get">
+  <input type="submit" value="Accept!">
+</form>
+
+<form action="/<%=session[:user_id] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="I'll think about it...">
+</form>

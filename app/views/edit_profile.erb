@@ -3,7 +3,7 @@
 <form action="/<%= session[:user_id] %>" method="post">
 <input type="hidden" name="_method" value="patch">
   <p>Email address:</p> <input name="args[email]" value="<%=@user.email %>"></input>
-  <p>Password:</p> <input type="password" name="args[password_hash]" placeholder="*********"></input>
+  <p>Password:</p> <input type="password" name="args[password_digest]" placeholder="*********"></input>
   <p>Birthday:</p> <input name="args[birthday]" value="<%=@user.birthday %>" placeholder="DD/MM/YYYY"></input>
   <p>Picture:</p> <input name="args[picture]" value="<%=@user.picture %>" placeholder="enter picture url"></input>
   <p>Quirk:</p> <input name="args[quirk]" value="<%=@user.quirk %>" placeholder="quiiiirk"></input>

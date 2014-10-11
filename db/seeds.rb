@@ -26,6 +26,13 @@ counter = 0
   counter += 1
 end
 
+30.times do
+  FutureBachelorette.create(user_id: User.all.sample.id, status: "closed")
+end
+
+10.times do
+  FutureBachelorette.create(user_id: User.all.sample.id, status: "open")
+end
 
 
 
