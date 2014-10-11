@@ -41,7 +41,7 @@ get '/congratulations' do
 end
 
 get '/:id/dates' do
-  date_notification?.update(status: "read")
+  date_notification?.update(status: "read") if date_notification?
   @dates = all_dates
   erb :dates
 end
