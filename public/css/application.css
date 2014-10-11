@@ -2,15 +2,39 @@ body {
 
 }
 
-.container {
-}
 th {
   text-align: left;
 }
 
-.bachlorette {
-  background-color: #c50511;
+h1 {
+  font-family: 'Raleway';
+  font-weight: 10;
 }
+
+h2 {
+  color: #ca918c;
+}
+
+p {
+  font-family: 'Indie Flower';
+  font-size: 18px;
+  color:#F2E3D5;
+  letter-spacing: 1px;
+}
+
+h3{
+  font-family: 'Raleway';
+}
+
+h4 {
+  font-family: 'Raleway';
+  color: white;
+}
+
+li{
+  font-family: 'Indie Flower';
+}
+
 
 .loggedinbar {
   display: block;
@@ -26,38 +50,42 @@ th {
 }
 
 .front img {
-  width: 300px;
-  height: 300px;
+  width: inherit;
+  height: auto;
 }
 
 .unread {
   background-color: red;
 }
 
+.bachlorette {
+  background-color: #C3C1E5;
+}
 .main_view {
-  background-color: #00F1FF;
+  background-color: white;
 }
 
-h1 {
+.login {
+  margin: auto;
+  text-align: center;
+  color: #1C4C86;
+}
+
+.login p {
+  text-align: center;
   font-family: 'Raleway';
-  font-weight: 10;
+  color: #1C4C86;
 }
 
-h2 {
-  color: #ca918c;
+.queue {
+  background-color: #9A98E3;
 }
 
-p {
-  font-family: 'Indie Flower';
+.queue li {
+  display: inline-block;
+  padding: 30px;
 }
 
-h3{
-  font-family: 'Raleway';
-}
-
-li{
-  font-family: 'Indie Flower';
-}
 
 /* entire container, keeps perspective */
 .flip-container {
@@ -69,8 +97,8 @@ li{
   }
 
 .flip-container, .front, .back {
-  width: 320px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
 }
 
 /* flip speed goes here */
@@ -100,4 +128,6 @@ li{
 /* back, initially hidden pane */
 .back {
   transform: rotateY(180deg);
+  background-color: #D92546;
+  padding: 5px 15px 5px 15px;
 }
