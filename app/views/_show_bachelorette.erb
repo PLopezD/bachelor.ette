@@ -1,5 +1,22 @@
+<div class="row bachlorette">
+<div class="col-md-offset-5 col-md-2 col-md-offset-5">
 <% if show_bachelorette %>
-<img src="<%= show_bachelorette.picture %>">
-<p><%= show_bachelorette.first_name %></p>
-<p><%= show_bachelorette.email %></p>
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="front">
+      <img src="<%= show_bachelorette.picture %>">
+    </div>
+    <div class="back">
+      <h4><%= show_bachelorette.first_name %> <%= show_bachelorette.last_name %></h4>
+      <p>email: <%= show_bachelorette.email %></p>
+      <p>quirk: <%= show_bachelorette.quirk %></p>
+      <p>bio: <%= show_bachelorette.bio %></p>
+      <p>preference: <%= show_bachelorette.preference %></p>
+    </div>
+  </div>
+</div>
+  <%= erb :_propose %>
 <% end %>
+
+</div>
+</div>

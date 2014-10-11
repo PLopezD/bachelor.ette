@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   # Tells user to give a URL to a gif.
   # validates :picture, presence: { message: "Add a photo" }
-
+  has_many :date_notifications
   has_many  :future_bachelorettes
   has_many  :hookups
   has_many  :proposals

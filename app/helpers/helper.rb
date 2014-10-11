@@ -35,3 +35,7 @@ end
 def all_dates
   (Hookup.where(recipient_id: session[:user_id]) + Hookup.where(sender_id: session[:user_id]))
 end
+
+def date_notification?
+  DateNotification.find_by(user: User.find(session[:user_id]), status: "unread")
+end

@@ -14,7 +14,11 @@ Welcome, <%= current_user.first_name %>
 </form>
 
 <form action="/<%=session[:user_id] %>/dates" method="get">
-  <input type="submit" value="My Dates">
+  <input
+  <% if date_notification? %>
+    class="unread"
+  <% end %>
+  type="submit" value="My Dates">
 </form>
 
 <form action="/<%=session[:user_id] %>" method="get">
