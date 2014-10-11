@@ -1,37 +1,7 @@
 <div class="container">
   <h1>Welcome to Bachelor.ette!</h1>
 
-  <% if session[:user_id] %>
-    <a href="/propose"><button>Propose</button></a>
-  
-  <% end %>
-
-
-  <% if current_user == show_bachelorette %>
-    <% show_proposals.each do |proposal| %>
-    <p><a href=""><%= proposal.sender.first_name %></a> said..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/accept/<%= proposal.id %>"><button>Check me out?</button></a><br><%= proposal.description %></p>
-    <% end %>
-  <% end %>
-
-
-  <form action="/" method="post">
-    <p>Email: </p>
-    <p><input type="email" id="Email" name="email" value=""></p>
-
-    <p>Password: </p>
-    <p><input type="password" id="Password" name="password" value=""></p>
-
-    <input type="submit" value="Log in"/>
-
-  </form>
-
-
-
-
-
-
-
-
-
-  <p><a href="/user/signup">Click here to sign up</a></p>
 </div>
+
+<%= erb :_bacheloretteview %>
+<%= erb :_login %>

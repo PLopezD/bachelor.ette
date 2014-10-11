@@ -1,12 +1,11 @@
 <div class="container">
-  <h1>Welcome to Bachelor.ette!</h1>
-  
-  <form action="/propose" method="post">
-    <p>Message your future love: </p>
-    <p><textarea type="text" name="proposal" placeholder="Keep it PG" value="" rows="10" cols="40"></textarea></p>
-
-    <input type="submit" value="Send with a kiss"/>
-  </form>
-
-
+  <% if has_already_proposed? %>
+    <h3>Slow down, horndog. Wait for the next lucky individual...</h3>
+  <% else %>
+    <form action="/propose" method="post">
+      <p>Message your future love: </p>
+      <p><textarea type="text" name="proposal" placeholder="Keep it PG" value="" rows="10" cols="40"></textarea></p>
+      <input type="submit" value="Send with a kiss"/>
+    </form>
+  <% end %>
 </div>

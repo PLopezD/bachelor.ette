@@ -1,4 +1,4 @@
-# Successful pairing where bachelorette 
+# Successful pairing where bachelorette
 # accepts proposal
 
 class User < ActiveRecord::Base
@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   # Tells user to give a URL to a gif.
   # validates :picture, presence: { message: "Add a photo" }
 
-  has_many  :future_bachs
+  has_many  :future_bachelorettes
   has_many  :hookups
   has_many  :proposals
   has_many  :recipients, through: :proposals
