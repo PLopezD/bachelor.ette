@@ -6,30 +6,34 @@
 <% if !on_active_list? %>
 
 <form  action="/futurebachelorette" method="post">
-  <button class="btn btn-lg btn-danger" type="submit" value="Get On The Bus!"> <i class="fa fa-bus"></i>     Get On The Bus!    <i class="fa fa-bus"></i></button>
+  <button class="btn  btn-danger" type="submit" value="Get On The Bus!"> <i class="fa fa-bus"></i>     Get On The Bus!    <i class="fa fa-bus"></i></button>
 
 </form>
 <% end %>
 
 <form action="/" method="get">
-  <button class="btn btn-lg btn-danger" input type="submit" value="Home"> <span class="glyphicon glyphicon-home"></span></i>    Home    <span class="glyphicon glyphicon-home"></span></button>
+  <button class="btn btn-danger" input type="submit" value="Home"> <span class="glyphicon glyphicon-home"></span></i>    Home    <span class="glyphicon glyphicon-home"></span></button>
 </form>
+
 
 <form action="/<%=session[:user_id] %>/dates" method="get">
-  <button class="btn btn-lg btn-danger" input type="submit" value="My Dates"> <i class="fa fa-heart"></i>    My Dates     <i class="fa fa-heart"></i></button>
-  <input
+  <button class="btn btn-danger"
+   input type="submit" value="My Dates"> <i class="fa fa-heart"></i>
   <% if date_notification? %>
-    class="unread"
+    New Date!
+  <% else%>
+       My Dates
   <% end %>
-  type="submit" value="My Dates">
+  <i class="fa fa-heart"></i></button>
 </form>
 
+
 <form action="/<%=session[:user_id] %>" method="get">
-  <button class="btn btn-lg btn-danger" type="submit" value="View Profile"> <i class="fa fa-heart"></i>    View Profile    <i class="fa fa-heart"></i></button>
+  <button class="btn btn-danger" type="submit" value="View Profile"> <i class="fa fa-heart"></i>    View Profile    <i class="fa fa-heart"></i></button>
 </form>
 
 <form action="/logout/" method="post">
-  <button class="btn btn-lg btn-danger" type="submit" value="Logout"> <i class="fa fa-chain-broken"></i>   Logout   <i class="fa fa-chain-broken"></i></button>
+  <button class="btn  btn-danger" type="submit" value="Logout"> <i class="fa fa-chain-broken"></i>   Logout   <i class="fa fa-chain-broken"></i></button>
 </form>
 
 </div>
