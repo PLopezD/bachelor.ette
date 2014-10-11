@@ -17,13 +17,16 @@
   </div>
 </div>
 
+<div class ='inline-buttons'>
 <form action="/<%=session[:user_id]%>/edit" method="get">
-  <input type="submit" value="Edit Profile">
+  
+  <button class='btn btn-danger'  type="submit" value="Edit Profile">Edit Profile    <i class="fa fa-refresh fa-spin"></i></button>
 </form>
 
 <form action="/<%=session[:user_id] %>" method="post">
   <input type="hidden" name="_method" value="delete">
-  <input type="submit" value="Delete My Account">
+
+  <button class='btn btn-danger' type="submit" value="Delete My Account">Delete My Account   <i class="fa fa-trash"></i></button>
 </form>
 
 </div>
