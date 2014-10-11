@@ -8,15 +8,6 @@ th {
   text-align: left;
 }
 
-.loggedinbar {
-  display: block;
-  float: right;
-}
-
-.loggedinbar form {
-  display: inline-block;
-}
-
 .thumbnail {
   width: 50px;
 }
@@ -28,3 +19,86 @@ img {
 .newdate {
   background-color: red;
 }
+
+.fa {
+  color: red
+}
+#welcome {
+   -webkit-font-smoothing: antialiased;
+}
+
+.loggedinbar {
+  display: block;
+  border: solid;
+  border-color: #8B1919;
+  background-color: pink;
+  text-align: center
+}
+
+.loggedinbar form {
+  display: inline-block;
+
+}
+.loggedinbar button {
+    background-color: hsl(350, 86%, 37%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ef3352", endColorstr="#af0d28");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ef3352), to(#af0d28));
+  background-image: -moz-linear-gradient(top, #ef3352, #af0d28);
+  background-image: -ms-linear-gradient(top, #ef3352, #af0d28);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ef3352), color-stop(100%, #af0d28));
+  background-image: -webkit-linear-gradient(top, #ef3352, #af0d28);
+  background-image: -o-linear-gradient(top, #ef3352, #af0d28);
+  background-image: linear-gradient(#ef3352, #af0d28);
+  border-color: #af0d28 #af0d28 hsl(350, 86%, 32%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+  -webkit-font-smoothing: antialiased;
+margin-left: 25px;
+margin-right: 25px;
+}
+
+.glyphicon-home {
+ color: red
+}
+
+.btn-custom{
+     background-color: hsl(350, 86%, 37%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ef3352", endColorstr="#af0d28");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ef3352), to(#af0d28));
+  background-image: -moz-linear-gradient(top, #ef3352, #af0d28);
+  background-image: -ms-linear-gradient(top, #ef3352, #af0d28);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ef3352), color-stop(100%, #af0d28));
+  background-image: -webkit-linear-gradient(top, #ef3352, #af0d28);
+  background-image: -o-linear-gradient(top, #ef3352, #af0d28);
+  background-image: linear-gradient(#ef3352, #af0d28);
+  border-color: #af0d28 #af0d28 hsl(350, 86%, 32%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+#welcome{
+
+
+}
+#bus {
+  color: red
+}
+#homebutton {
+  color: yellow
+}
+#mydates {
+  color: blue
+}
+#viewpro {
+  color: green
+}
+#logout {
+color: purple;
+}
+
+

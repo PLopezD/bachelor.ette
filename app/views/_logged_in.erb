@@ -1,28 +1,30 @@
 <% if logged_in? %>
 <div class="loggedinbar">
 
-Welcome, <%= current_user.first_name %>
+<span id='welcome'>Welcome, <%= current_user.first_name %></span>
 
 <% if !on_active_list? %>
-<form action="/futurebachelorette" method="post">
-  <input type="submit" value="Get On The Bus!">
+
+<form  action="/futurebachelorette" method="post">
+  <button class="btn btn-lg btn-danger" type="submit" value="Get On The Bus!"> <i class="fa fa-bus"></i>     Get On The Bus!    <i class="fa fa-bus"></i></button>
+
 </form>
 <% end %>
 
 <form action="/" method="get">
-  <input type="submit" value="Home">
+  <button class="btn btn-lg btn-danger" input type="submit" value="Home"> <span class="glyphicon glyphicon-home"></span></i>    Home    <span class="glyphicon glyphicon-home"></span></button>
 </form>
 
 <form action="/<%=session[:user_id] %>/dates" method="get">
-  <input type="submit" value="My Dates">
+  <button class="btn btn-lg btn-danger" input type="submit" value="My Dates"> <i class="fa fa-heart"></i>    My Dates     <i class="fa fa-heart"></i></button>
 </form>
 
 <form action="/<%=session[:user_id] %>" method="get">
-  <input type="submit" value="View Profile">
+  <button class="btn btn-lg btn-danger" type="submit" value="View Profile"> <i class="fa fa-heart"></i>    View Profile    <i class="fa fa-heart"></i></button>
 </form>
 
 <form action="/logout/" method="post">
-  <input type="submit" value="Logout">
+  <button class="btn btn-lg btn-danger" type="submit" value="Logout"> <i class="fa fa-chain-broken"></i>   Logout   <i class="fa fa-chain-broken"></i></button>
 </form>
 
 </div>
