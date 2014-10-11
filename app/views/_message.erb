@@ -1,0 +1,6 @@
+<% if session[:messages] %>
+<% session[:messages].each do |name, message|%>
+<h3><%= message.first%></h3>
+<% end %>
+<% end %>
+<% session[:messages] = nil %>

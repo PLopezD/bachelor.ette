@@ -1,0 +1,18 @@
+<h1>Proposer's Profile</h1>
+<img src="<%= @proposer.picture %>"><br>
+<%= @proposer.first_name %><br>
+<%= @proposer.last_name %><br>
+<%= @proposer.birthday %><br>
+<%= @proposer.gender %><br>
+<%= @proposer.preference %><br>
+<%= @proposer.bio %><br>
+<%= @proposer.quirk %><br>
+
+<form action="/accept" method="post">
+  <input type="hidden" name="proposal_id" value="<%=@proposal_id%>" >
+  <input type="submit" value="Accept!">
+</form>
+
+<form action="/" method="get">
+  <input type="submit" value="Back to home...">
+</form>
