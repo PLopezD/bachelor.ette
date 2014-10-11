@@ -19,7 +19,7 @@ img {
 }
 
 .fa {
-  color: red
+  color: white
 }
 #welcome {
    -webkit-font-smoothing: antialiased;
@@ -53,6 +53,14 @@ h4 {
 li{
   font-family: 'Indie Flower';
 }
+input[type="text"]
+{
+    font-color:red;
+}
+button{
+  font-family: 'Raleway';
+}
+
 
 .loggedinbar {
   display: block;
@@ -68,30 +76,16 @@ li{
 }
 
 .loggedinbar button {
-    background-color: hsl(350, 86%, 37%) !important;
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ef3352", endColorstr="#af0d28");
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#ef3352), to(#af0d28));
-  background-image: -moz-linear-gradient(top, #ef3352, #af0d28);
-  background-image: -ms-linear-gradient(top, #ef3352, #af0d28);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ef3352), color-stop(100%, #af0d28));
-  background-image: -webkit-linear-gradient(top, #ef3352, #af0d28);
-  background-image: -o-linear-gradient(top, #ef3352, #af0d28);
-  background-image: linear-gradient(#ef3352, #af0d28);
-  border-color: #af0d28 #af0d28 hsl(350, 86%, 32%);
-  color: #fff !important;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
-  -webkit-font-smoothing: antialiased;
-   display: block;
-  border-color: #8B1919;
-  background-color: pink;
-  text-align: center;
+
 margin-left: 25px;
 margin-right: 25px;
 }
+.inline-buttons form {
+  display: inline;
+}
 
 .glyphicon-home {
- color: red
+ color: white
 }
 
 
@@ -123,14 +117,6 @@ margin-right: 25px;
   color: #1C4C86;
 }
 
-p.propose {
-  color: #D92546;
-}
-
-p.accept_proposal {
-  color: #D92546;
-}
-
 .queue {
   background-color: #9A98E3;
 }
@@ -139,18 +125,6 @@ p.accept_proposal {
   display: inline-block;
   padding: 30px;
 }
-
-
-ul.dates {
-  width: 100%;
-  display: inline;
-  margin-right: 40px;
-  margin-left: 0px;
-  padding-left: 0px;
-  text-align: left;
-  list-style-type: none;
-}
-
 
 
 /* entire container, keeps perspective */
@@ -197,3 +171,14 @@ ul.dates {
   background-color: #D92546;
   padding: 5px 15px 5px 15px;
 }
+.update_range {
+margin-bottom: 0.25%;
+text-align: center;
+}
+.input-group{
+  width: 200px
+}
+input{
+  font-family: 'Raleway';
+}
+

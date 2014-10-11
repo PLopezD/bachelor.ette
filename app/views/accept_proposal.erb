@@ -1,20 +1,12 @@
-<div class="col-md-offset-4 col-md-4 col-md-offset-4">
-
 <h1>Proposer's Profile</h1>
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-      <img src="<%= @proposer.picture %>">
-    </div>
-    <div class="back">
-      <h4><%= @proposer.first_name %> <%= @proposer.last_name %></h4>
-      <p><%= @proposer.quirk %></p>
-      <p><%= @proposer.bio %></p>
-      <p><%= @proposer.preference %></p>
-    </div>
-  </div>
-</div>
-
+<img src="<%= @proposer.picture %>"><br>
+<%= @proposer.first_name %><br>
+<%= @proposer.last_name %><br>
+<%= @proposer.birthday %><br>
+<%= @proposer.gender %><br>
+<%= @proposer.preference %><br>
+<%= @proposer.bio %><br>
+<%= @proposer.quirk %><br>
 
 <form action="/accept" method="post">
   <input type="hidden" name="proposal_id" value="<%=@proposal_id%>" >
@@ -24,5 +16,3 @@
 <form action="/" method="get">
   <input type="submit" value="Back to home...">
 </form>
-
-</div>
