@@ -38,8 +38,25 @@ th {
   background-color: #00F1FF;
 }
 
+h1 {
+  font-family: 'Raleway';
+  font-weight: 10;
+}
+
 h2 {
   color: #ca918c;
+}
+
+p {
+  font-family: 'Indie Flower';
+}
+
+h3{
+  font-family: 'Raleway';
+}
+
+li{
+  font-family: 'Indie Flower';
 }
 
 /* entire container, keeps perspective */
