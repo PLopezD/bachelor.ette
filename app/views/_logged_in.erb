@@ -17,6 +17,11 @@
 
 <form action="/<%=session[:user_id] %>/dates" method="get">
   <button class="btn btn-lg btn-danger" input type="submit" value="My Dates"> <i class="fa fa-heart"></i>    My Dates     <i class="fa fa-heart"></i></button>
+  <input
+  <% if date_notification? %>
+    class="unread"
+  <% end %>
+  type="submit" value="My Dates">
 </form>
 
 <form action="/<%=session[:user_id] %>" method="get">

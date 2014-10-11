@@ -1,9 +1,11 @@
-<div class="container">
-  <h3>Upcoming hotties.</h3>
+<div class="row">
+<div class="col-md-12 queue">
+  <h3 style="text-align:center">Upcoming hotties.</h3>
   <ul>
     <% show_queue.each do |user| %>
-
-    <li><img class="thumbnail" src="<%=user.picture %>"> <%= user.first_name + " - " + "\"" + user.quirk + "\"" %></li>
+    <li><img class="thumbnail" src="<%=user.picture %>"> <%= user.quirk %></li>
     <% end %>
   </ul>
+
+</div>
 </div>

@@ -1,9 +1,7 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+body {
+
 }
+
 th {
   text-align: left;
 }
@@ -25,6 +23,35 @@ img {
 }
 #welcome {
    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-family: 'Raleway';
+  font-weight: 10;
+}
+
+h2 {
+  color: #ca918c;
+}
+
+p {
+  font-family: 'Indie Flower';
+  font-size: 18px;
+  color:#F2E3D5;
+  letter-spacing: 1px;
+}
+
+h3{
+  font-family: 'Raleway';
+}
+
+h4 {
+  font-family: 'Raleway';
+  color: white;
+}
+
+li{
+  font-family: 'Indie Flower';
 }
 
 .loggedinbar {
@@ -79,26 +106,85 @@ margin-right: 25px;
   -webkit-font-smoothing: antialiased;
 }
 
-
-
-#welcome{
-
-
-}
-#bus {
-  color: red
-}
-#homebutton {
-  color: yellow
-}
-#mydates {
-  color: blue
-}
-#viewpro {
-  color: green
-}
-#logout {
-color: purple;
+.front img {
+  width: inherit;
+  height: auto;
 }
 
+.unread {
+  background-color: red;
+}
 
+.bachlorette {
+  background-color: #C3C1E5;
+}
+.main_view {
+  background-color: white;
+}
+
+.login {
+  margin: auto;
+  text-align: center;
+  color: #1C4C86;
+}
+
+.login p {
+  text-align: center;
+  font-family: 'Raleway';
+  color: #1C4C86;
+}
+
+.queue {
+  background-color: #9A98E3;
+}
+
+.queue li {
+  display: inline-block;
+  padding: 30px;
+}
+
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000;
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-container, .front, .back {
+  width: 400px;
+  height: 400px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+  background-color: #D92546;
+  padding: 5px 15px 5px 15px;
+}
