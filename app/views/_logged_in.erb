@@ -1,5 +1,9 @@
-<% if session[:user_id] %>
-<div class="loggedin">
+<% if logged_in? %>
+<div class="loggedinbar">
+
+<form action="/" method="get">
+  <input type="submit" value="Home">
+</form>
 
 <form action="/<%=session[:user_id] %>/dates" method="get">
   <input type="submit" value="My Dates">

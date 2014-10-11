@@ -1,3 +1,9 @@
-<% show_queue.each do |user| %>
-<p><%= user.first_name + " - " + "\"" + user.quirk + "\"" %></p>
-<% end %>
+<div class="container">
+  <h3>Upcoming hotties.</h3>
+  <ul>
+    <% show_queue.each do |user| %>
+
+    <li><img class="thumbnail" src="<%=user.picture %>"> <%= user.first_name + " - " + "\"" + user.quirk + "\"" %></li>
+    <% end %>
+  </ul>
+</div>

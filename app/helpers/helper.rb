@@ -12,7 +12,18 @@ def current_user
   User.find_by(id: session[:user_id])
 end
 
-
 def show_proposals
   Proposal.where(recipient_id: current_user.id)
+end
+
+def has_already_proposed?
+  Proposal.find_by(sender_id: session[:user_id])
+end
+
+def logged_in?
+  session[:user_id]
+end
+
+def the_bachelorette?
+  current_user == show_bachelorette
 end
