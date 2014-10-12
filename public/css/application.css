@@ -8,6 +8,7 @@ th {
 
 .thumbnail {
   width: 50px;
+
 }
 
 img {
@@ -22,7 +23,7 @@ img {
   color: white
 }
 #welcome {
-   -webkit-font-smoothing: antialiased;
+ -webkit-font-smoothing: antialiased;
 }
 
 h1 {
@@ -34,12 +35,24 @@ h2 {
   color: #ca918c;
 }
 
+.queue {
+    display: inline;
+    height: 100%;
+    vertical-align: middle;
+
+}
+.queue img {
+   margin: auto
+}
+
 p {
   font-family: 'Indie Flower';
   font-size: 18px;
   color:#F2E3D5;
   letter-spacing: 1px;
 }
+
+
 
 h3{
   font-family: 'Raleway';
@@ -56,28 +69,24 @@ li{
 
 input[type="text"]
 {
-    font-color:red;
+  font-color:red;
 }
 button{
   font-family: 'Raleway';
+  margin: 5px;
+  margin-bottom: 5px;
 }
 
-.loggedinbar {
-  display: block;
-  border: solid;
-  border-color: #8B1919;
-  background-color: pink;
-  text-align: center
-}
 
-.loggedinbar form {
-  display: inline-block;
+.nav  {
 
 }
+
+
 
 .loggedinbar button {
-margin-left: 25px;
-margin-right: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .inline-buttons form {
@@ -151,10 +160,10 @@ ul.dates {
 .flip-container {
   perspective: 1000;
 }
-  /* flip the pane when hovered */
-  .flip-container:hover .flipper, .flip-container.hover .flipper {
-    transform: rotateY(180deg);
-  }
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
 
 .flip-container, .front, .back {
   width: 400px;
@@ -193,12 +202,17 @@ ul.dates {
 }
 
 .update_range {
-margin-bottom: 0.25%;
-text-align: center;
+  margin-bottom: 0.25%;
+  text-align: center;
 }
 .input-group{
-  width: 200px
+  width: 200px;
+
 }
+.input-group-addon i{
+  color: red;
+}
+
 input{
   font-family: 'Raleway';
 }
