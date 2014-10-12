@@ -6,25 +6,19 @@
 <% if !on_active_list? %>
 
 <form  action="/futurebachelorette" method="post">
-
   <button class="btn  btn-danger" type="submit" value="Get On The Bus!">   Get On The Bus!    <i class="fa fa-bus"></i></button>
-
 
 </form>
 <% end %>
 
 <form action="/" method="get">
-
-  <button class="btn btn-danger" input type="submit" value="Home"> </i>    Home    <span class="glyphicon glyphicon-home"></span></button>
-
+  <button class="btn btn-danger" input type="submit" value="Home">    Home    <span class="glyphicon glyphicon-home"></span></button>
 </form>
 
 
 <form action="/<%=session[:user_id] %>/dates" method="get">
   <button class="btn btn-danger"
-
-   input type="submit" value="My Dates">
-
+   input type="submit" value="My Dates"> 
   <% if date_notification? %>
     New Date!
   <% else%>
@@ -39,9 +33,7 @@
 </form>
 
 <form action="/logout/" method="post">
-
   <button class="btn  btn-danger" type="submit" value="Logout">   Logout   <i class="fa fa-chain-broken"></i></button>
-
 </form>
 
 </div>

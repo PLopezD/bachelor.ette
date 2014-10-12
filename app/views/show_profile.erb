@@ -9,26 +9,25 @@
     </div>
     <div class="back">
       <h4><%= @user.first_name %> <%= @user.last_name %></h4>
-      <p><%= @user.quirk %></p>
-      <p><%= @user.bio %></p>
-      <p><%= @user.preference %></p>
+      <p>email: <%= @user.email %></p>
+      <p>quirk: <%= @user.quirk %></p>
+      <p>bio: <%= @user.bio %></p>
+      <p>preference: <%= @user.preference %></p>
     </div>
   </div>
 </div>
-
 
 <div class ='inline-buttons'>
 <form action="/<%=session[:user_id]%>/edit" method="get">
   
   <button class='btn btn-danger'  type="submit" value="Edit Profile">Edit Profile    <i class="fa fa-refresh fa-spin"></i></button>
-
 </form>
+
 <form action="/<%=session[:user_id] %>" method="post">
   <input type="hidden" name="_method" value="delete">
 
   <button class='btn btn-danger' type="submit" value="Delete My Account">Delete My Account   <i class="fa fa-trash"></i></button>
 </form>
-</div>
 
 </div>
 </div>
