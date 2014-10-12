@@ -78,11 +78,9 @@ button{
 }
 
 
-.nav  {
-
-}
 #logo{
-height: 69px;
+
+height: 35px;
 width: 83px;
 }
 
@@ -217,6 +215,11 @@ ul.dates {
 }
 .input-group-addon i{
   color: red;
+
+}
+
+.bachlorette button{
+
 
 }
 
