@@ -81,7 +81,10 @@ button{
 .nav  {
 
 }
-
+#logo{
+height: 69px;
+width: 83px;
+}
 
 
 .loggedinbar button {
