@@ -4,37 +4,45 @@
 
     <form action="/<%= session[:user_id] %>" method="post">
       <input type="hidden" name="_method" value="patch">
-  <div class="input-group margin-bottom-sm">
-      <span class="input-group-addon"><i class="fa fa-envelope-o  fa-fw"></i></span>
-      <input class="form-control" name="args[email]" value="<%=@user.email %>"></input>
-</div>
+      <div class="input-group margin-bottom-sm">
+        <span class="input-group-addon"><i class="fa fa-envelope-o  fa-fw"></i></span>
+        <input class="form-control" name="args[email]" value="<%=@user.email %>"></input>
+      </div>
       <div class="input-group margin-bottom-sm">
        <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
        <input class="form-control" name="args[password_digest]" type="password" placeholder="Password">
      </div>
      <div class="input-group">
       <span class="input-group-addon"><i class="fa fa-birthday-cake fa-fw"></i></span>
-   <input class="form-control" name="args[birthday]" value="<%=@user.birthday %>" placeholder="DD/MM/YYYY"></input>
+      <input class="form-control" name="args[birthday]" value="<%=@user.birthday %>" placeholder="DD/MM/YYYY"></input>
     </div>
 
-  <div class="input-group">
+    <div class="input-group">
       <span class="input-group-addon"><i class="fa fa-file-image-o fa-fw"></i></span>
- <input class="form-control" name="args[picture]" value="<%=@user.picture %>" placeholder ="enter picture url"></input>
+      <input class="form-control" name="args[picture]" value="<%=@user.picture %>" placeholder ="enter picture url"></input>
+    </div>
 
- <div class="input-group">
-    <p>Quirk:</p> <input class="form-control" name="args[quirk]" value="<%=@user.quirk %>" placeholder="quiiiirk"></input>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-quote-left fa-fw"></i></span>
+      <input class="form-control" name="args[quirk]" value="<%=@user.quirk %>" placeholder="quiiiirk"></input>
+    </div>
 
- </div>
-    <p>Gender</p> <input class="form-control" name="args[gender]" value="<%=@user.gender %>" placeholder="i.e female"></input>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-male fa-fw"></i><i class="fa fa-female fa-fw"></i><i class="fa fa-question fa-fw"></i></span>
+      <input class="form-control" name="args[gender]" value="<%=@user.gender %>" placeholder="i.e female"></input>
+    </div>
 
+    <div class="input-group">
+     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
+     <input class="form-control" name="args[bio]" value="<%=@user.bio %>" placeholder="tell us about yourself"></input>
+   </div>
 
-    <p>Bio</p> <input class="form-control" name="args[bio]" value="<%=@user.bio %>" placeholder="tell us about yourself"></input>
-
-
-    <p>Sexual preference</p> <input class="form-control"  name="args[preference]" value="<%=@user.preference %>" placeholder="who are you looking for?"></input>
-  </div>
-  <button class='btn btn-danger' type="submit" value="update">Update</button>
-</form>
+   <div class="input-group">
+     <span class="input-group-addon"><i class="fa fa-long-arrow-right fa-fw"></i></span>
+     <input class="form-control"  name="args[preference]" value="<%=@user.preference %>" placeholder="who are you looking for?"></input>
+   </div>
+   <button class='btn btn-danger' type="submit" value="update">Update</button>
+ </form>
 
 
 </div>

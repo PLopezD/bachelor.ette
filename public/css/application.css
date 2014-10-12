@@ -91,6 +91,7 @@ button{
 
 .inline-buttons form {
   display: inline;
+  text-align: center
 }
 
 .glyphicon-home {
@@ -207,10 +208,13 @@ ul.dates {
 }
 .input-group{
   width: 200px;
+    margin: 5px;
+    width: 100%
 
 }
 .input-group-addon i{
   color: red;
+
 }
 
 input{
