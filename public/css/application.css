@@ -24,6 +24,9 @@ img {
 }
 #welcome {
  -webkit-font-smoothing: antialiased;
+ font-size: 1.5em;
+ padding-right:5%
+
 }
 
 h1 {
@@ -79,15 +82,27 @@ button{
 
 
 #logo{
-
 height: 35px;
 width: 83px;
 }
 
+li:hover{
+background-color: white
+}
 
-.loggedinbar button {
-  margin-left: 25px;
-  margin-right: 25px;
+.nav{
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 1px solid #e5e5e5;
+  -webkit-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.15);}
+}
+
+.nav button {
+margin-left: 35%;
 }
 
 .inline-buttons form {
@@ -204,8 +219,7 @@ ul.dates {
 }
 
 .update_range {
-  margin-bottom: 0.25%;
-  text-align: center;
+  margin-bottom: 1%;
 }
 .input-group{
   width: 200px;
@@ -218,12 +232,19 @@ ul.dates {
 
 }
 
-.bachlorette button{
-
-
+.delete {
+margin-left: 15%;
+margin-right: 5%
+}
+.edit {
+margin-left: 5%;
 }
 
 input{
   font-family: 'Raleway';
 }
 
+
+.bachlorette {
+  padding-top: 60px
+}

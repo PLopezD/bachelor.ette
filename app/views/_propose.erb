@@ -1,6 +1,6 @@
     <% if logged_in? && !the_bachelorette? %>
     <% if !has_already_proposed? %>
-      <a href="/propose"><button class ="btn btn-danger col-md-offset-6" >Propose</button></a>
+      <a href="/propose"><button class ="btn btn-danger col-md-2 col-md-offset-5" >Propose</button></a>
     <% else %>
       <h3><%= show_bachelorette.first_name %> has recieved your token of love.</h3>
       <% end %>
