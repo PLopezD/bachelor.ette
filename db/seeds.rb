@@ -12,7 +12,7 @@ doc = Nokogiri::HTML(File.open('db/dates.html'))
 blurbs = []
 doc.search('p').map { |par|  blurbs.push(par.inner_text) if par.inner_text.length > 300}
 
-quirks = ["Picks Nose","Nevernude","Left-handed", "Semi-professional Kazoo Player","Allergic to milk", "Speaks fluent pig-latin", "Don't cut my toenails", "I shower monthly", "I spend all my time on my favorite app, Shitter", "I spend all my money on Shitter emojis", "I pick fights with people bigger than me", "I like bumblebees more than turtles and ospreys", " I can't use a spoon", "I drink coffee", "I like music", "I'm an alcoholic", "I used to be a crack-whore"]
+quirks = ["Picks Nose","Nevernude","Left-handed", "Semi-professional Kazoo Player","Allergic to milk", "Speaks fluent pig-latin", "Don't cut my toenails", "I shower monthly", "I spend all my time on my favorite app, Shitter", "I spend all my money on Shitter emojis", "I pick fights with people bigger than me", "I like bumblebees more than turtles and ospreys", " I can't use a spoon", "I drink coffee", "I like music", "I'm an alcoholic", "I used to be a crack-whore","My mother and I have a special kind of love.","Exercise?"]
 counter = 0
 
 
