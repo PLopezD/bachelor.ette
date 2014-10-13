@@ -247,6 +247,17 @@ input{
   padding-top: 60px
 }
 
+.error {
+  color: red;
+  max-height: 25px;
+  font-size: 8px;
+}
+
+.error li {
+  list-style: none;
+
+}
+
 /*## stolen footer*/
 #footer{
   height:40px;
