@@ -16,7 +16,7 @@ post '/' do
   #   end
     session[:user_id] = user.id
   else
-    session[:messages] = {error: "Email not found. Create an account."}
+    session[:messages] = {error: ["Email not found. Create an account."]}
   end
   redirect '/'
 end

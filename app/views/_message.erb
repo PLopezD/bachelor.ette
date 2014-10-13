@@ -4,7 +4,7 @@
 
   <ul>
 <% session[:messages].each do |name, message|%>
-<li style='text-align:center; height:50px; font-size:2em;'><%= message%></li>
+<li style='text-align:center; height:50px; font-size:2em;'><%= message.first%></li>
 <% end %>
   </ul>
 </div>
