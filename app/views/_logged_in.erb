@@ -1,5 +1,4 @@
 <% if logged_in? %>
-
   <ul class="nav nav-justified">
     <li>
       <span id='welcome'>Welcome, <%= current_user.first_name %></span>
@@ -9,38 +8,45 @@
     </li>
     <li>
       <form action="/" method="get">
-        <button class="btn btn-danger" input type="submit" value="Home">    Home    <span class="glyphicon glyphicon-home"></span></button>
+        <button class="btn btn-danger" input type="submit" value="Home"> <span class="glyphicon glyphicon-home"></span>   Home    </button>
       </form>
     </li>
     <% if !on_active_list? %>
     <li>
       <form  action="/futurebachelorette" method="post">
-        <button class="btn  btn-danger" type="submit" value="Get On The Bus!">   Get On The Bus!    <i class="fa fa-bus"></i></button>
+        <button class="btn  btn-danger" type="submit" value="Get On The Bus!"><i class="fa fa-bus"></i>   Get On The Bus!    </button>
       </form>
     </li>
     <% end %>
     <li>
       <form action="/<%=session[:user_id] %>/dates" method="get">
         <button class="btn btn-danger"
-        input type="submit" value="My Dates">
+        input type="submit" value="My Dates"><i class="fa fa-heart"></i>
         <% if date_notification? %>
         New Date!
         <% else%>
         My Dates
         <% end %>
-        <i class="fa fa-heart"></i></button>
+        </button>
       </form>
     </li>
     <li>
       <form action="/<%=session[:user_id] %>" method="get">
-        <button class="btn btn-danger" type="submit" value="View Profile">    View Profile    <i class="fa fa-heart"></i></button>
+        <button class="btn btn-danger" type="submit" value="View Profile"> <i class="fa fa-heart"></i>   View Profile    </button>
       </form>
     </li>
     <li>
       <form action="/logout/" method="post">
-        <button class="btn  btn-danger" type="submit" value="Logout">   Logout   <i class="fa fa-chain-broken"></i></button>
+        <button class="btn  btn-danger" type="submit" value="Logout"><i class="fa fa-chain-broken"></i>   Logout   </button>
       </form>
     </li>
-
   </ul>
+<% elsif session[:messages]%>
+  <ul class="nav">
+<li style='text-align:center; height:50px; font-size:2em;'><%= session[:messages][:error]%></li>
+    </ul>
+<% else %>
+  <ul class="nav">
+<li style='text-align:center; height:50px; font-size:2em;'> Welcome to your future</li>
+    </ul>
 <% end %>

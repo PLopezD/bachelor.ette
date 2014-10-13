@@ -24,6 +24,9 @@ img {
 }
 #welcome {
  -webkit-font-smoothing: antialiased;
+ font-size: 1.5em;
+ padding-right:5%
+
 }
 
 h1 {
@@ -79,15 +82,25 @@ button{
 
 
 #logo{
-
 height: 35px;
 width: 83px;
 }
 
 
-.loggedinbar button {
-  margin-left: 25px;
-  margin-right: 25px;
+.nav{
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 1px solid #e5e5e5;
+  -webkit-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.15);}
+}
+
+
+.nav button {
+margin-left: 35%;
 }
 
 .inline-buttons form {
@@ -204,8 +217,7 @@ ul.dates {
 }
 
 .update_range {
-  margin-bottom: 0.25%;
-  text-align: center;
+  margin-bottom: 1%;
 }
 .input-group{
   width: 200px;
@@ -218,12 +230,109 @@ ul.dates {
 
 }
 
-.bachlorette button{
-
-
+.delete {
+margin-left: 15%;
+margin-right: 5%
+}
+.edit {
+margin-left: 5%;
 }
 
 input{
   font-family: 'Raleway';
 }
+
+
+.bachlorette {
+  padding-top: 60px
+}
+
+/*## stolen footer*/
+#footer{
+  height:40px;
+  width:100%;
+  padding:10px 0;
+  position:fixed;
+  bottom:-40px;
+  background:#625a57;
+}
+
+#footerMenu{
+  margin-left:126px;
+  margin-top:auto;
+  margin-bottom:auto;
+  float:left;
+  width:500px;
+}
+
+#footerSocial{
+  float:left;
+}
+
+#footerMenuTextButtons{
+  float:left;
+  margin-right:10px;
+   margin-left:10px;
+}
+
+#footerSearch {
+  position: absolute;
+  right: 126px;
+  top: 11px;
+}
+#footerSearch form {
+  line-height: 22px;
+  padding: 0 47px 0 0;
+  position: relative;
+}
+
+#footerSearch .gform_body,
+#footerSearch .gfield {
+  margin: 0;
+}
+
+#footerSearch .gfield {
+  padding-left: 161px;
+  position: relative;
+}
+#footerSearch .gfield_label {
+  color: #fff;
+  font-style: italic;
+  font-weight: normal;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+#footerSearch .ginput_container {
+  margin-left: 15px;
+    top: 0;
+}
+#footerSearch .gform_footer {
+}
+
+
+#footer input[type="text"]{
+  background-color:#fff;
+  border-style:none;
+  color:#aca6a4;
+  display: inline;
+  height:22px;
+  width:177px;
+  padding:3px;
+  top: 0
+}
+
+#footer input[type="submit"]{
+  background:url(../images/footerSend.jpg);
+  border:none;
+  display:block;
+  height:22px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width:44px;
+}
+/* ## end footer*/
+
+
 
